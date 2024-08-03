@@ -7,7 +7,7 @@ function Contact() {
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
       <form action='https://api.web3forms.com/submit' method='post'>
-      <input type="hidden" name="access_key" value={import.meta.env.VITE_MYKEY}/>
+      <input type="hidden" name="access_key" value="911bc718-661c-472e-ab09-857001daae97"/>
         <div className="formGroup">
           <input
             type="text"
