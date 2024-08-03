@@ -1,14 +1,14 @@
+import React from 'react';
 import styles from './ContactStyles.module.css';
-
 function Contact() {
+  // console.log('Access Key:', process.env.REACT_APP_ACCESS_KEY);
+  // console.log('Your key',AK);
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+      <form action='https://api.web3forms.com/submit' method='post'>
+      <input type="hidden" name="access_key" value={import.meta.env.VITE_MYKEY}/>
         <div className="formGroup">
-          <label htmlFor="name" hidden>
-            Name
-          </label>
           <input
             type="text"
             name="name"
@@ -18,21 +18,26 @@ function Contact() {
           />
         </div>
         <div className="formGroup">
-          <label htmlFor="email" hidden>
-            Email
-          </label>
           <input
             type="text"
             name="email"
             id="email"
-            placeholder="Email"
+            // placeholder="Email"
+            value="sauravuyadav003@gmail.com"
+            disabled
             required
           />
         </div>
         <div className="formGroup">
-          <label htmlFor="message" hidden>
-            Message
-          </label>
+          <input
+            type="text"
+            name="email"
+            id="youremail"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div className="formGroup">
           <textarea
             name="message"
             id="message"
